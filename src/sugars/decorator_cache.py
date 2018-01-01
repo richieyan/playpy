@@ -1,3 +1,24 @@
+"""
+https://stackoverflow.com/questions/7492068/python-class-decorator-arguments
+@Cache
+def double(...): 
+   ...
+is equivalent to
+
+def double(...):
+   ...
+double=Cache(double)
+While
+
+@Cache(max_hits=100, timeout=50)
+def double(...):
+   ...
+is equivalent to
+
+def double(...):
+    ...
+double = Cache(max_hits=100, timeout=50)(double)
+"""
 class _Cache(object):
     def __init__(self, function, max_hits=10, timeout=5):
         self.function = function
