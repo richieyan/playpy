@@ -1,5 +1,7 @@
 """
 https://stackoverflow.com/questions/7492068/python-class-decorator-arguments
+http://scottlobdell.me/2015/04/decorators-arguments-python/
+
 @Cache
 def double(...): 
    ...
